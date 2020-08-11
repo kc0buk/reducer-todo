@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react';
 import { initialState, todoListReducer } from './reducers/todoListReducer'
 import TodoList from './components/TodoList'
+import TodoForm from './components/TodoForm'
 import './App.css';
 
 
@@ -18,7 +19,9 @@ function App() {
         taskList={state.todoList}
         dispatch={dispatch}
       />
-      
+      <TodoForm 
+        dispatch={dispatch}
+      />
     </main>
   );
 }

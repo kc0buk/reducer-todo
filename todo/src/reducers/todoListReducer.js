@@ -30,6 +30,17 @@ export const todoListReducer = ( state, action ) => {
                     }
                 })
             }
+        case 'ADD_NEW_ITEM':
+            console.log(state)
+            return {
+                ...state,
+                todoList: [...state.todoList, action.payload]
+            }
+        case 'CLEAR_COMPLETED':
+            return {
+                ...state,
+                todoList: state.todoList.filter( item => item.completed === false )
+            }
         default:
             return state
     }

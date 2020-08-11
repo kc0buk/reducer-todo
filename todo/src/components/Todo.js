@@ -5,7 +5,8 @@ const Todo = props => {
 
     return (
         <div
-            onClick={ () => dispatch({ type: 'TOGGLE_COMPLETED', payload: props.item })}
+            onClick={ () => dispatch({ 
+                type: 'TOGGLE_COMPLETED', payload: props.item })}
             className={`item${props.item.completed ? ' completed' : '' }`}
         >
         <p>{props.item.task}</p>
